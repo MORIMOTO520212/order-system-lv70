@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<h1>顧客管理</h1>
+
+@include('common.title', ['title' => '顧客管理画面'])
 
 <table class="table-auto border-collapse">
   <thead>
@@ -18,5 +19,12 @@
     @endforeach
   </tbody>
 </table>
+
+<style scoped>
+  th,
+  td {
+    padding: 10px 15px;
+  }
+</style>
 
 @endsection

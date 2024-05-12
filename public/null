@@ -1,1 +1,12 @@
-echo "hello"
+$category = Category::all();
+$category[0]->products();
+$category = Category::all();
+$category[0]->products;
+$products = Products::all();
+$products[0]->category->name;
+$products = Product::all();
+$products[0]->category->name;
+date_format('Y')
+date_format(new DateTime, 'Y')
+date_format(new DateTime, 'Y-m-d')
+date_format(new DateTimeImmutable(), 'Y-m-d')

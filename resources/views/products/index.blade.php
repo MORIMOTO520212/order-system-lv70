@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>商品検索画面</h1>
 
+@include('common.title', ['title' => '商品検索画面'])
 
 <div class="container">
   <form action="#" method="get">
@@ -36,5 +36,12 @@
 <div class="container w-[800px]">
   {{ $products->appends(Request::all())->links() }}
 </div>
+
+<style scoped>
+  th,
+  td {
+    padding: 10px 15px;
+  }
+</style>
 
 @endsection
