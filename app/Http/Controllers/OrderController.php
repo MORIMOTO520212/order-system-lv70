@@ -1,11 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use App\Models\Order;
 use Illuminate\Http\Request;
 
-class OrderController extends Controller
+final class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +17,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        return view('orders.index');
     }
 
     /**
@@ -24,13 +27,15 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        $customers = Customer::all();
+        $products = Products::all();
+
+        return view('orders.create', ['customers' => $customers]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -41,7 +46,6 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
     public function show(Order $order)
@@ -52,7 +56,6 @@ class OrderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
     public function edit(Order $order)
@@ -63,8 +66,6 @@ class OrderController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Order $order)
@@ -75,7 +76,6 @@ class OrderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
     public function destroy(Order $order)
