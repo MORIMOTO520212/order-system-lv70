@@ -10,6 +10,10 @@
 ## Laravelテンプレート
 - いつも使う機能を既に実装したLaravelのテンプレート。
 
+## 機能
+- 認証
+- Web Tinker
+
 ## 要件
 ### vscode拡張機能のインストール
 - PHP Intelephense（コード補完）
@@ -18,3 +22,8 @@
 - EditorConfig for VS Code（.editorconfigをvscodeに適用させるやつ）
 - Tailwind CSS intelliSense（tailwindcssのコード補完）
 
+
+## drawioで用意しておくもの
+- 簡単なUML
+- ER図
+- 画面設計図
