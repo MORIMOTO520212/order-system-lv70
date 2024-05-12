@@ -7,10 +7,14 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Laravelテンプレート
+- いつも使う機能を既に実装したLaravelのテンプレート。
 
-# 要件
+## 要件
 ### vscode拡張機能のインストール
-- Laravel Pint
-- Laravel Snippets
-- Laravel Blade Snippets
-- EditorConfig for VS Code
+- PHP Intelephense（コード補完）
+- Laravel Pint（フォーマッタ）
+- Laravel Blade Snippets（Bladeのフォーマッタ）
+- EditorConfig for VS Code（.editorconfigをvscodeに適用させるやつ）
+- Tailwind CSS intelliSense（tailwindcssのコード補完）
+
